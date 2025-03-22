@@ -6,7 +6,9 @@
   <title>Illia Savchenko - CV</title>
   <link rel="stylesheet" href="style.css">
   <script>
+    var currentLanguage = 'pl';
     function switchLang(lang) {
+      currentLanguage = lang;
       document.querySelectorAll('[data-lang]').forEach(el => {
         el.style.display = el.dataset.lang === lang ? 'block' : 'none';
       });
@@ -14,10 +16,15 @@
     function toggleTheme() {
       document.body.classList.toggle('dark');
     }
+    function downloadCV() {
+      var darkMode = document.body.classList.contains('dark');
+      var fileName = "CV_Illia_Savchenko_" + currentLanguage;
+      fileName += ".pdf";
+      window.location.href = fileName;
+    }
   </script>
 </head>
 <body onload="switchLang('pl')">
-  <!-- Контейнер с шапкой, аватаром, ФИО, должностью -->
   <div class="container">
     <div class="header">
       <img src="avatar.png" alt="avatar" class="avatar">
@@ -27,7 +34,6 @@
       </div>
     </div>
 
-    <!-- Блок переключения языков и темы -->
     <div class="controls">
       <span class="lang-switcher" onclick="switchLang('en')">EN</span>
       <span class="lang-switcher" onclick="switchLang('ru')">RU</span>
@@ -35,19 +41,22 @@
       <span class="theme-toggle" onclick="toggleTheme()">🌙 Theme</span>
     </div>
 
-    <!-- Блок контактов -->
     <div class="contact-section">
       <h2 class="contact-heading">Contact</h2>
       <ul class="contact-list">
-        <li><span class="contact-icon">📧</span> <strong>Email:</strong>&nbsp;<a href="mailto:illia.savchenko.work@gmail.com"> illia.savchenko.work@gmail.com</a></li>
+        <li><span class="contact-icon">📧</span> <strong>Email:</strong>&nbsp;illia.savchenko.work@gmail.com</li>
         <li><span class="contact-icon">📱</span> <strong>Telefon:</strong>&nbsp;790-687-172</li>
-        <li><span class="contact-icon">🐙</span> <strong>GitHub:</strong>&nbsp;<a href="https://github.com/KastonI"> github.com/KastonI</a></li>
-        <li><span class="contact-icon">💼</span> <strong>LinkedIn:</strong>&nbsp;<a href="https://www.linkedin.com/in/illia-savchenko"> linkedin.com/in/illia-savchenko</a></li>
+        <li><span class="contact-icon">🐙</span> <strong>GitHub:</strong>&nbsp;<a href="https://github.com/KastonI">github.com/KastonI</a></li>
+        <li><span class="contact-icon">💼</span> <strong>LinkedIn:</strong>&nbsp;<a href="https://www.linkedin.com/in/illia-savchenko">linkedin.com/in/illia-savchenko</a></li>
       </ul>
+    </div>
+
+    <div class="download-section">
+      <button class="download-button" onclick="downloadCV()">Скачать CV в PDF</button>
     </div>
   </div>
   
-  <!-- ======= СЕКЦИЯ ПОЛЬСКОГО ЯЗЫКА ======= -->
+  <!-- Polish language -->
   <div class="section" data-lang="pl">
     <h2>🧠 O mnie</h2>
     <p>Jestem Junior DevOps Engineerem, specjalizującym się w automatyzacji i technologiach chmurowych.
@@ -93,7 +102,7 @@
     <p><a href="https://github.com/KastonI/RTSP-Recorder-to-Cloud">RTSP Recorder to Cloud</a></p>
   </div>
 
-  <!-- ======= СЕКЦИЯ АНГЛИЙСКОГО ЯЗЫКА ======= -->
+  <!-- English language -->
   <div class="section" data-lang="en">
     <h2>🧠 About me</h2>
     <p>I am a Junior DevOps Engineer focused on cloud and automation.
@@ -139,7 +148,7 @@
     <p><a href="https://github.com/KastonI/RTSP-Recorder-to-Cloud">RTSP Recorder to Cloud</a></p>
   </div>
 
-  <!-- ======= СЕКЦИЯ РУССКОГО ЯЗЫКА ======= -->
+  <!-- Russian language -->
   <div class="section" data-lang="ru">
     <h2>🧠 Обо мне</h2>
     <p>Я Junior DevOps инженер, специализируюсь на автоматизации и облачных технологиях.
