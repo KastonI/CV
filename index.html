@@ -7,18 +7,33 @@
   <link rel="stylesheet" href="style.css">
   <script>
     var currentLanguage = 'pl';
+    // Тексты для кнопки в зависимости от языка
+    var downloadButtonText = {
+      'pl': 'Pobierz CV w PDF',
+      'en': 'Download CV in PDF',
+      'ru': 'Скачать CV в PDF'
+    };
+
     function switchLang(lang) {
       currentLanguage = lang;
+      // Показываем нужную языковую секцию
       document.querySelectorAll('[data-lang]').forEach(el => {
         el.style.display = el.dataset.lang === lang ? 'block' : 'none';
       });
+      // Обновляем текст кнопки скачивания
+      var btn = document.querySelector('.download-button');
+      if(btn) {
+        btn.innerText = downloadButtonText[lang];
+      }
     }
+
     function toggleTheme() {
       document.body.classList.toggle('dark');
     }
+
     function downloadCV() {
-      var fileName = "CV_Illia_Savchenko_" + currentLanguage;
-      fileName += ".pdf";
+      // Формируем имя файла: например, CV_Illia_Savchenko_pl.pdf
+      var fileName = "CV_Illia_Savchenko_" + currentLanguage + ".pdf";
       window.location.href = fileName;
     }
   </script>
@@ -43,7 +58,11 @@
     <div class="contact-section">
       <h2 class="contact-heading">Contact</h2>
       <ul class="contact-list">
-        <li><span class="contact-icon">📧</span> <strong>Email:</strong>&nbsp;illia.savchenko.work@gmail.com</li>
+        <li>
+          <span class="contact-icon">📧</span>
+          <strong>Email:</strong>&nbsp;
+          <a href="mailto:illia.savchenko.work@gmail.com">illia.savchenko.work@gmail.com</a>
+        </li>
         <li><span class="contact-icon">📱</span> <strong>Telefon:</strong>&nbsp;790-687-172</li>
         <li><span class="contact-icon">🐙</span> <strong>GitHub:</strong>&nbsp;<a href="https://github.com/KastonI">github.com/KastonI</a></li>
         <li><span class="contact-icon">💼</span> <strong>LinkedIn:</strong>&nbsp;<a href="https://www.linkedin.com/in/illia-savchenko">linkedin.com/in/illia-savchenko</a></li>

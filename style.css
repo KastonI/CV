@@ -128,13 +128,13 @@ body.dark .contact-heading {
 /* Download Section */
 .download-section {
   margin-top: 1.5rem;
-  text-align: center;
+  text-align: left; /* Выравнивание по левой стороне */
 }
 
 .download-button {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
+  padding: 0.5rem 1rem; /* Сделана чуть меньше */
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
