@@ -201,3 +201,33 @@ html, body {
   height: auto;
   overflow-x: hidden;
 }
+
+/* Стили для кнопки скачивания */
+.download-section {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.download-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #0984e3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #087dc0;
+}
+
+body.dark .download-button {
+  background-color: #74b9ff;
+  color: #fff;
+}
+
+body.dark .download-button:hover {
+  background-color: #5aa9e6;
+}
