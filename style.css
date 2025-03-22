@@ -28,7 +28,6 @@ body.dark .container {
   background: #2c2c2c;
 }
 
-/* Header styles */
 .header {
   display: flex;
   align-items: center;
@@ -69,7 +68,6 @@ body.dark .position-title {
   color: #ccc;
 }
 
-/* Controls */
 .controls {
   margin-bottom: 1rem;
 }
@@ -90,7 +88,6 @@ body.dark .lang-switcher, body.dark .theme-toggle {
   color: #fff;
 }
 
-/* Contact Section */
 .contact-section {
   margin-top: 1rem;
 }
@@ -125,15 +122,14 @@ body.dark .contact-heading {
   font-size: 1.2rem;
 }
 
-/* Download Section */
 .download-section {
   margin-top: 1.5rem;
-  text-align: left; /* Выравнивание по левой стороне */
+  text-align: left;
 }
 
 .download-button {
   display: inline-block;
-  padding: 0.5rem 1rem; /* Сделана чуть меньше */
+  padding: 0.5rem 1rem;
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -161,7 +157,6 @@ body.dark .download-button:hover {
   background: linear-gradient(45deg, #4a90e2, #8b82f8);
 }
 
-/* Section styles */
 .section {
   margin: 2rem auto;
   padding: 1.5rem 2rem;
@@ -194,7 +189,6 @@ body.dark .section h2 {
   animation: fadeInUp 0.4s ease;
 }
 
-/* Links */
 a {
   color: #0984e3;
   text-decoration: none;
@@ -204,7 +198,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -218,7 +211,6 @@ a:hover {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Media Queries */
 @media screen and (max-width: 600px) {
   .header {
     flex-direction: column;

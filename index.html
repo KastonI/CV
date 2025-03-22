@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <script>
     var currentLanguage = 'pl';
-    // Тексты для кнопки в зависимости от языка
     var downloadButtonText = {
       'pl': 'Pobierz CV w PDF',
       'en': 'Download CV in PDF',
@@ -16,11 +15,9 @@
 
     function switchLang(lang) {
       currentLanguage = lang;
-      // Показываем нужную языковую секцию
       document.querySelectorAll('[data-lang]').forEach(el => {
         el.style.display = el.dataset.lang === lang ? 'block' : 'none';
       });
-      // Обновляем текст кнопки скачивания
       var btn = document.querySelector('.download-button');
       if(btn) {
         btn.innerText = downloadButtonText[lang];
@@ -32,7 +29,6 @@
     }
 
     function downloadCV() {
-      // Формируем имя файла: например, CV_Illia_Savchenko_pl.pdf
       var fileName = "CV_Illia_Savchenko_" + currentLanguage + ".pdf";
       window.location.href = fileName;
     }
