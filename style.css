@@ -202,32 +202,33 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Стили для кнопки скачивания */
 .download-section {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   text-align: center;
 }
 
 .download-button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #0984e3;
-  color: #fff;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(45deg, #0984e3, #74b9ff);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  color: #fff;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .download-button:hover {
-  background-color: #087dc0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 body.dark .download-button {
-  background-color: #74b9ff;
+  background: linear-gradient(45deg, #5aa9e6, #a29bfe);
   color: #fff;
-}
-
-body.dark .download-button:hover {
-  background-color: #5aa9e6;
 }
