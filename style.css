@@ -28,7 +28,7 @@ body.dark .container {
   background: #2c2c2c;
 }
 
-/* Шапка (header) + аватар + блок имени */
+/* Header styles */
 .header {
   display: flex;
   align-items: center;
@@ -69,7 +69,7 @@ body.dark .position-title {
   color: #ccc;
 }
 
-/* Блок переключения языков и темы */
+/* Controls */
 .controls {
   margin-bottom: 1rem;
 }
@@ -90,7 +90,7 @@ body.dark .lang-switcher, body.dark .theme-toggle {
   color: #fff;
 }
 
-/* Блок с контактами */
+/* Contact Section */
 .contact-section {
   margin-top: 1rem;
 }
@@ -104,7 +104,7 @@ body.dark .lang-switcher, body.dark .theme-toggle {
 }
 
 body.dark .contact-heading {
-  color: #fff; /* Белый текст в тёмной теме */
+  color: #fff;
 }
 
 .contact-list {
@@ -114,8 +114,8 @@ body.dark .contact-heading {
 }
 
 .contact-list li {
-  margin-bottom: 0.2rem; /* Уменьшенный отступ между строками */
-  line-height: 1.2;      /* Уменьшенная высота строки */
+  margin-bottom: 0.2rem;
+  line-height: 1.2;
   display: flex;
   align-items: center;
 }
@@ -125,83 +125,7 @@ body.dark .contact-heading {
   font-size: 1.2rem;
 }
 
-/* Анимации */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes fadeInUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-@keyframes fadeInDown {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* Общие стили для блоков с описанием (section) */
-.section {
-  margin: 2rem auto;
-  padding: 1.5rem 2rem;
-  background: #ffffff;
-  border-radius: 10px;
-  max-width: 900px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: background 0.3s ease, color 0.3s ease;
-  animation: fadeIn 0.5s ease;
-}
-
-body.dark .section {
-  background: #2c2c2c;
-}
-
-.section h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  margin-top: 0;
-  color: #0984e3;
-  animation: fadeInUp 0.5s ease;
-}
-body.dark .section h2 {
-  color: #74b9ff; /* Контрастный цвет в тёмной теме */
-}
-
-.section h3 {
-  margin-top: 1rem;
-  font-weight: 600;
-  animation: fadeInUp 0.4s ease;
-}
-
-/* Ссылки */
-a {
-  color: #0984e3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Адаптивность */
-@media screen and (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .lang-switcher, .theme-toggle {
-    float: none;
-    display: inline-block;
-    margin-top: 10px;
-  }
-}
-
-html, body {
-  min-height: 100vh;
-  height: auto;
-  overflow-x: hidden;
-}
-
+/* Download Section */
 .download-section {
   margin-top: 1.5rem;
   text-align: center;
@@ -231,4 +155,85 @@ html, body {
 body.dark .download-button {
   background: linear-gradient(45deg, #5aa9e6, #a29bfe);
   color: #fff;
+}
+
+body.dark .download-button:hover {
+  background: linear-gradient(45deg, #4a90e2, #8b82f8);
+}
+
+/* Section styles */
+.section {
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  border-radius: 10px;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: background 0.3s ease, color 0.3s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+body.dark .section {
+  background: #2c2c2c;
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: #0984e3;
+  animation: fadeInUp 0.5s ease;
+}
+body.dark .section h2 {
+  color: #74b9ff;
+}
+
+.section h3 {
+  margin-top: 1rem;
+  font-weight: 600;
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Links */
+a {
+  color: #0984e3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeInDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .lang-switcher, .theme-toggle {
+    float: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+
+html, body {
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden;
 }
